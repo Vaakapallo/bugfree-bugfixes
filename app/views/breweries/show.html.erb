@@ -5,10 +5,9 @@
   <%= @brewery.name %>
 </p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @brewery.year %>
-</p>
+  <h2><i>Established in <%= @brewery.year %></i></h2>
+
+<p> Provding <%= @brewery.beers.count %> beers.</p>
 
 <%= link_to 'Edit', edit_brewery_path(@brewery) %> |
 <%= link_to 'Back', breweries_path %>
