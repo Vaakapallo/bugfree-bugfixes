@@ -12,8 +12,10 @@
 
 <p>
   <strong>Brewery:</strong>
-  <%= @beer.brewery_id %>
+  <%= link_to @beer.brewery.name, @beer.brewery %>
 </p>
+
+<p> <%= link_to 'list of breweries', breweries_path %> </p>
 
 <%= link_to 'Edit', edit_beer_path(@beer) %> |
 <%= link_to 'Back', beers_path %>
