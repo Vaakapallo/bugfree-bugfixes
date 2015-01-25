@@ -3,11 +3,6 @@ class Beer < ActiveRecord::Base
   	has_many :ratings
 
   	def average_rating
-  		sum = 0
-  		ratings.each do |rating|
-  			sum += rating.score
-  		end
-  		sum /= ratings.count
-  		return sum
+  		ratings.average(:score)
   	end
 end
