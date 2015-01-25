@@ -1,0 +1,359 @@
+irb(main):001:0> bre = Brewery.new(name:"BrewDog", 2007)
+SyntaxError: (irb):1: syntax error, unexpected ')', expecting =>
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):002:0> bre = Brewery.new(name:"BrewDog", year:2007)
+=> #<Brewery id: nil, name: "BrewDog", year: 2007, created_at: nil, updated_at: nil>
+irb(main):003:0> bre.beers.create(name:"Punk IPA", style:"IPA")
+ActiveRecord::RecordNotSaved: You cannot call create unless the parent is saved
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:482:in `_create_record'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/has_many_association.rb:172:in `_create_record'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:143:in `create'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_proxy.rb:285:in `create'
+	from (irb):3
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):004:0> bre.beers.create name:"Punk IPA", style:"IPA"
+ActiveRecord::RecordNotSaved: You cannot call create unless the parent is saved
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:482:in `_create_record'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/has_many_association.rb:172:in `_create_record'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:143:in `create'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_proxy.rb:285:in `create'
+	from (irb):4
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1
+irb(main):006:0* bre = Brewery.new(name:"BrewDog", year:2007);
+irb(main):007:0* bre.beers.create name:"Punk IPA", style:"IPA";
+irb(main):008:0* bre
+ActiveRecord::RecordNotSaved: You cannot call create unless the parent is saved
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:482:in `_create_record'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/has_many_association.rb:172:in `_create_record'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_association.rb:143:in `create'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/associations/collection_proxy.rb:285:in `create'
+	from (irb):7
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):009:0> 
+irb(main):010:0* ;
+irb(main):011:0* bre
+=> #<Brewery id: nil, name: "BrewDog", year: 2007, created_at: nil, updated_at: nil>
+irb(main):012:0> bre.beers
+=> #<ActiveRecord::Associations::CollectionProxy []>
+irb(main):013:0> bre.beers.first
+=> nil
+irb(main):014:0> bre.save
+   (0.2ms)  begin transaction
+  SQL (0.8ms)  INSERT INTO "breweries" ("name", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "BrewDog"], ["year", 2007], ["created_at", "2015-01-25 12:34:11.049014"], ["updated_at", "2015-01-25 12:34:11.049014"]]
+   (0.7ms)  commit transaction
+=> true
+irb(main):015:0> bre.beers
+=> #<ActiveRecord::Associations::CollectionProxy []>
+irb(main):016:0> bre.beers.first
+=> nil
+irb(main):017:0> bre
+=> #<Brewery id: 8, name: "BrewDog", year: 2007, created_at: "2015-01-25 12:34:11", updated_at: "2015-01-25 12:34:11">
+irb(main):018:0> Beer.create name:"Punk IPA", style:"IPA", brewery_id:bre.id
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Punk IPA"], ["style", "IPA"], ["brewery_id", 8], ["created_at", "2015-01-25 12:35:46.038923"], ["updated_at", "2015-01-25 12:35:46.038923"]]
+   (9.0ms)  commit transaction
+=> #<Beer id: 18, name: "Punk IPA", style: "IPA", brewery_id: 8, created_at: "2015-01-25 12:35:46", updated_at: "2015-01-25 12:35:46">
+irb(main):019:0> bre.beers
+=> #<ActiveRecord::Associations::CollectionProxy []>
+irb(main):020:0> bre.beers.first
+=> nil
+irb(main):021:0> beers
+NameError: undefined local variable or method `beers' for main:Object
+	from (irb):21
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):022:0> 
+irb(main):023:0* Beers
+NameError: uninitialized constant Beers
+	from (irb):23
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+irb(main):024:0> Beers.all
+NameError: uninitialized constant Beers
+	from (irb):24
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+irb(main):025:0> Beer.all
+  Beer Load (0.2ms)  SELECT "beers".* FROM "beers"
+=> #<ActiveRecord::Relation [#<Beer id: 1, name: "Iso 3", style: "Lager", brewery_id: 1, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Beer id: 2, name: "Karhu", style: "Lager", brewery_id: 1, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Beer id: 3, name: "Tuplahumala", style: "Lager", brewery_id: 1, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Beer id: 4, name: "Huvila Pale Ale", style: "Pale Ale", brewery_id: 2, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Beer id: 5, name: "X Porter", style: "Porter", brewery_id: 2, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Beer id: 6, name: "Hefezeizen", style: "Weizen", brewery_id: 3, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Beer id: 7, name: "Helles", style: "Lager", brewery_id: 3, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Beer id: 8, name: "Iso 3", style: "Lager", brewery_id: 4, created_at: "2015-01-18 13:03:03", updated_at: "2015-01-18 13:03:03">, #<Beer id: 9, name: "Karhu", style: "Lager", brewery_id: 4, created_at: "2015-01-18 13:03:03", updated_at: "2015-01-18 13:03:03">, #<Beer id: 10, name: "Tuplahumala", style: "Lager", brewery_id: 4, created_at: "2015-01-18 13:03:03", updated_at: "2015-01-18 13:03:03">, ...]>
+irb(main):026:0> bre.beers.count
+   (0.3ms)  SELECT COUNT(*) FROM "beers" WHERE "beers"."brewery_id" = ?  [["brewery_id", 8]]
+=> 1
+irb(main):027:0> bre.beers
+=> #<ActiveRecord::Associations::CollectionProxy []>
+irb(main):028:0> bre.beers.last
+=> nil
+irb(main):029:0> Brewery.all
+  Brewery Load (0.2ms)  SELECT "breweries".* FROM "breweries"
+=> #<ActiveRecord::Relation [#<Brewery id: 1, name: "Koff", year: 1897, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Brewery id: 2, name: "Malmgard", year: 2001, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Brewery id: 3, name: "Weihenstephaner", year: 1042, created_at: "2015-01-18 13:03:00", updated_at: "2015-01-18 13:03:00">, #<Brewery id: 4, name: "Koff", year: 1897, created_at: "2015-01-18 13:03:03", updated_at: "2015-01-18 13:03:03">, #<Brewery id: 5, name: "Malmgard", year: 2001, created_at: "2015-01-18 13:03:03", updated_at: "2015-01-18 13:03:03">, #<Brewery id: 6, name: "Weihenstephaner", year: 1042, created_at: "2015-01-18 13:03:03", updated_at: "2015-01-18 13:03:03">, #<Brewery id: 8, name: "BrewDog", year: 2007, created_at: "2015-01-25 12:34:11", updated_at: "2015-01-25 12:34:11">]>
+irb(main):030:0> Beer.find_by name:"Punk IPA";
+irb(main):031:0* 
+irb(main):032:0* ;
+irb(main):033:0* _.style
+  Beer Load (0.2ms)  SELECT  "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT 1  [["name", "Punk IPA"]]
+NoMethodError: undefined method `style' for #<Brewery::ActiveRecord_Relation:0x007fa2c2727bf0>
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):33
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):034:0> Beer.find_by name:"Punk IPA"
+  Beer Load (0.4ms)  SELECT  "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT 1  [["name", "Punk IPA"]]
+=> #<Beer id: 18, name: "Punk IPA", style: "IPA", brewery_id: 8, created_at: "2015-01-25 12:35:46", updated_at: "2015-01-25 12:35:46">
+irb(main):035:0> _.brewery
+  Brewery Load (0.3ms)  SELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = ? LIMIT 1  [["id", 8]]
+=> #<Brewery id: 8, name: "BrewDog", year: 2007, created_at: "2015-01-25 12:34:11", updated_at: "2015-01-25 12:34:11">
+irb(main):036:0> bre.beers
+=> #<ActiveRecord::Associations::CollectionProxy []>
+irb(main):037:0> Beer.create name:"Nanny State", style:"lowalcohol", brewery_id:bre.id
+   (0.3ms)  begin transaction
+  SQL (2.5ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Nanny State"], ["style", "lowalcohol"], ["brewery_id", 8], ["created_at", "2015-01-25 12:50:02.488245"], ["updated_at", "2015-01-25 12:50:02.488245"]]
+   (0.8ms)  commit transaction
+=> #<Beer id: 19, name: "Nanny State", style: "lowalcohol", brewery_id: 8, created_at: "2015-01-25 12:50:02", updated_at: "2015-01-25 12:50:02">
+irb(main):038:0> _ratings.create score:25
+NameError: undefined local variable or method `_ratings' for main:Object
+	from (irb):38
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):039:0> _.ratings.create score:25
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 25], ["beer_id", 19], ["created_at", "2015-01-25 12:51:11.780568"], ["updated_at", "2015-01-25 12:51:11.780568"]]
+   (0.7ms)  commit transaction
+=> #<Rating id: 1, score: 25, beer_id: 19, created_at: "2015-01-25 12:51:11", updated_at: "2015-01-25 12:51:11">
+irb(main):040:0> _.ratings.create score:45
+NoMethodError: undefined method `ratings' for #<Rating:0x007fa2c6541c88>
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activemodel-4.2.0/lib/active_model/attribute_methods.rb:433:in `method_missing'
+	from (irb):40
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1Beers.find_by name:"Nanny State"
+NameError: uninitialized constant Beers
+	from (irb):41
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+irb(main):042:0> Beer.find_by name:"Nanny State"
+  Beer Load (0.1ms)  SELECT  "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT 1  [["name", "Nanny State"]]
+=> #<Beer id: 19, name: "Nanny State", style: "lowalcohol", brewery_id: 8, created_at: "2015-01-25 12:50:02", updated_at: "2015-01-25 12:50:02">
+irb(main):043:0> b = _
+=> #<Beer id: 19, name: "Nanny State", style: "lowalcohol", brewery_id: 8, created_at: "2015-01-25 12:50:02", updated_at: "2015-01-25 12:50:02">
+irb(main):044:0> b.ratings.create score:45
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 45], ["beer_id", 19], ["created_at", "2015-01-25 12:52:09.334710"], ["updated_at", "2015-01-25 12:52:09.334710"]]
+   (9.1ms)  commit transaction
+=> #<Rating id: 2, score: 45, beer_id: 19, created_at: "2015-01-25 12:52:09", updated_at: "2015-01-25 12:52:09">
+irb(main):045:0> b.ratings.create score:66
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 66], ["beer_id", 19], ["created_at", "2015-01-25 12:52:12.676093"], ["updated_at", "2015-01-25 12:52:12.676093"]]
+   (8.2ms)  commit transaction
+=> #<Rating id: 3, score: 66, beer_id: 19, created_at: "2015-01-25 12:52:12", updated_at: "2015-01-25 12:52:12">
+irb(main):046:0> Beers.find_by name:"Punk IPA"
+NameError: uninitialized constant Beers
+	from (irb):46
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/Lassi/Documents/RoR/ratebeer/bin/rails:8:in `<top (required)>'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/Lassi/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+irb(main):047:0> Beer.find_by name:"Punk IPA"
+  Beer Load (0.1ms)  SELECT  "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT 1  [["name", "Punk IPA"]]
+=> #<Beer id: 18, name: "Punk IPA", style: "IPA", brewery_id: 8, created_at: "2015-01-25 12:35:46", updated_at: "2015-01-25 12:35:46">
+irb(main):048:0> _.ratings.create score:15
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 15], ["beer_id", 18], ["created_at", "2015-01-25 12:52:37.251921"], ["updated_at", "2015-01-25 12:52:37.251921"]]
+   (9.0ms)  commit transaction
+=> #<Rating id: 4, score: 15, beer_id: 18, created_at: "2015-01-25 12:52:37", updated_at: "2015-01-25 12:52:37">
+irb(main):049:0> bre.beers
+=> #<ActiveRecord::Associations::CollectionProxy []>
+irb(main):050:0> bre.beers.first
+=> nil
+irb(main):051:0> b.brewery
+  Brewery Load (0.1ms)  SELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = ? LIMIT 1  [["id", 8]]
+=> #<Brewery id: 8, name: "BrewDog", year: 2007, created_at: "2015-01-25 12:34:11", updated_at: "2015-01-25 12:34:11">
+irb(main):052:0> 
