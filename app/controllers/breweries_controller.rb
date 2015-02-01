@@ -24,10 +24,6 @@ def authenticate
    authenticate_or_request_with_http_basic do |username, password|
      password == admin_accounts[username]
    end
-
-    authenticate_or_request_with_http_basic do |username, password|
-      username == "admin" and password == "secret"
-    end
   end
 
   # GET /breweries/1/edit

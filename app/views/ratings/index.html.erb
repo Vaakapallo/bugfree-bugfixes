@@ -7,16 +7,16 @@
     <div class="row">
       <div class="col-md-2 col-md-offset-1"><h3>Name</h3></div>
       <div class="col-md-1"><h3>Score</h3></div>
-      <div class="col-md-3 col-md-offset-4"><p>Total of <%= @ratings.count %> ratings.</p></div>
+	  <div class="col-md-2 col-md-offset-1"><h3>User</h3></div>
     </div>
     <% @ratings.each do |rating| %>
       <div class="row">
         <div class="col-md-2 col-md-offset-1 col-xs-1"><%= link_to rating.beer.to_s, rating.beer %></div>
         <div class="col-md-1 col-xs-1"><%= rating.score %></div>
-        <div class="col-md-2 col-md-offset-3"><%= rating.to_s %></div>
-        <div class="col-md-1 col-md-offset-2"><%= button_to 'Destroy', rating, method: :delete, data: { confirm: 'Are you sure?'} %></div>
+		<div class="col-md-2 col-md-offset-1"><%= link_to rating.user.username, rating.user %></div>
       </div>
     <% end %>
+    <strong>Total of <%= @ratings.count %> ratings.</strong>
   </div>
 </div>
 
