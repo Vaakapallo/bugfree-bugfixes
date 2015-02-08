@@ -12,4 +12,10 @@ class User < ActiveRecord::Base
 
 	has_many :ratings, dependent: :destroy
 	has_many :beers, through: :ratings
+
+  def favorite_beer
+    return nil if ratings.empty?
+    ratings.sort_by{ |r| r.score }.last.beer
+  end
+
 end
