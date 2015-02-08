@@ -14,8 +14,8 @@
         <div class="col-md-2 col-md-offset-1 col-xs-1"><%= link_to beer.name, beer %></div>
         <div class="col-md-1 col-xs-1"><%= beer.style %></div>
         <div class="col-md-1 col-xs-1"><%= link_to beer.brewery.name, beer.brewery %></div>
-        <div class="col-md-1 col-md-offset-5 col-xs-1"><%= button_to 'Edit', edit_beer_path(beer), {:class => "btn btn-default" } %></div>
-        <div class="col-md-1 col-xs-1"><%= button_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?'} %></div>
+        <div class="col-md-1 col-md-offset-5 col-xs-1"><%= button_to 'Edit', edit_beer_path(beer), {:class => "btn btn-default" } if current_user %></div>
+        <div class="col-md-1 col-xs-1"><%= button_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?'} if current_user %></div>
       </div>
     <% end %>
   </div>
@@ -23,4 +23,4 @@
 
 <br>
 
-<%= link_to 'New Beer', new_beer_path %>
+<%= link_to('New Beer', new_beer_path) if current_user %>
