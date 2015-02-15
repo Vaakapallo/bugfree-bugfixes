@@ -35,6 +35,7 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov', require: false
+  gem 'webmock'
 end
 
 group :production do
@@ -45,6 +46,8 @@ end
 ruby '2.2.0'
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
