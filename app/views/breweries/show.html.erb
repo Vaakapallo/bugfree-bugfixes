@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<h2><%= @brewery.name %>
+  <% if not @brewery.active  %>
+      <span class="label label-info">retired</span>
+  <% end %>
+</h2>
 
 <p>
-  <strong>Name:</strong>
-  <%= @brewery.name %>
+  <em>Established year:</em>
+  <%= @brewery.year %>
 </p>
 
-  <h2><i>Established in <%= @brewery.year %></i></h2>
+<p>Number of beers <%= @brewery.beers.count%> </p>
 
-<p> Providing <%= @brewery.beers.count %> beers.</p>
-
-<p> <%= link_to 'list of beers', beers_path %> </p>
-
-<p>
+<ul>
  <% @brewery.beers.each do |beer| %>
-   <%= link_to beer.name,  beer%>
+   <li><%= link_to beer.name, beer %></li>
  <% end %>
-</p>
+</ul>
 
-<p>
-	<% if @brewery.ratings.empty? %>
-	 There's no rating on the beers in this brewery!
-	<% else %>
-	 Has <%= pluralize(@brewery.ratings.count, 'rating') %>, average: <%= @brewery.average_rating %>
-	<% end %>
-</p>
+<% if @brewery.ratings.empty? %>
+    <p>beers of the brewery have not yet been rated! </p>
+<% else %>
+    <p>Has <%= pluralize(@brewery.ratings.count,'rating') %>, average <%= round(@brewery.average_rating) %> </p>
+<% end %>
 
-<%= link_to 'Edit', edit_brewery_path(@brewery) if current_user %> |
-<%= link_to 'Back', breweries_path %>
+<%= link_to "change activity", toggle_activity_brewery_path(@brewery.id), method: :post, class: "btn btn-primary" %>
+
+<% if current_user %>
+	<%= edit_and_destroy_buttons(@brewery) %>
+<% end %>

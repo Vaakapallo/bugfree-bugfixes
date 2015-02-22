@@ -43,6 +43,11 @@ group :production do
    gem 'rails_12factor'
 end
 
+gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
+end
+
 ruby '2.2.0'
 
 gem 'bcrypt', '~> 3.1.7'

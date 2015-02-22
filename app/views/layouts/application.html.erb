@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Ratebeer</title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<%= csrf_meta_tags %>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-</head>
-<body>
-	<nav class= "navbar navbar-default">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Beershop</a>
-		</div>
-		<div id="navbar">
-			<ul class= "nav navbar-nav">
-				<li><%= link_to 'breweries', breweries_path %></li>
-				<li><%= link_to 'beers', beers_path %></li>
-				<li><%= link_to 'ratings', ratings_path %></li>
-				<li><%= link_to 'users', users_path %></li>
-				<li><%= link_to 'places', places_path %></li>
-				<li><a>|</a></li>
-				<% if not current_user.nil? %>
-				<li><%= link_to current_user.username, current_user %></li>
-				<li><%= link_to 'rate a beer', new_rating_path %></li>
-        		<li><%= link_to 'signout', signout_path, method: :delete, data: { confirm: 'Are you sure you want to sign out?' } %></li>
-				<% end %>
-				<% if current_user.nil? %>
-				<li><%= link_to 'signin', signin_path %></li>
-				<li><%= link_to 'signup', signup_path %></li>
-				<% end %>
-			</ul>
-		</div>
-	</nav>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Ratebeer" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Ratebeer" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
 
-	<%= yield %>
-</body>
+    <main role="main" class=".container">
+      <%= render 'layouts/messages' %>
+
+      <div class="row">
+        <div class="col-md-8">
+          <%= yield %>
+        </div>
+        <div class="col-md-4">
+          <img src="http://www.cs.helsinki.fi/u/mluukkai/wadror/pint.jpg" width="200">
+        </div>
+      </div>
+
+    </main>
+  </body>
 </html>

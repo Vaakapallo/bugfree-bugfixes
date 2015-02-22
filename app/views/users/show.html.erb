@@ -22,7 +22,6 @@
 <p> Average user rating: <%= @user.average_rating %> </p>
 
 <% if @user == current_user %>
-	<%= link_to 'Edit', edit_user_path(@user) %>
-	<%= link_to 'Delete account', @user, method: :delete, data: { confirm: 'Are you sure?'} %>
+	<%= edit_and_destroy_buttons(@user) %>
 <% end %>
 <%= link_to 'Back', users_path %>
