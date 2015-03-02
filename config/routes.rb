@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'kaikki_bisset', to: 'beers#index'
 
+  get 'beerlist', to: 'beers#list'
+
+  get 'ngbeerlist', to:'beers#nglist'
+
   get 'signup', to: 'users#new'
 
   get 'signin', to: 'sessions#new'
